@@ -65,10 +65,6 @@ npx prisma db push
 # Geliştirme modunda başlatın  
 npm run dev  
 
-### 3️⃣ Docker ile Çalıştırma
-
-docker-compose up -d  
-
 ---
 
 ## 🎨 Temel Özelleştirmeler
