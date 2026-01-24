@@ -1,0 +1,22 @@
+# 🛡 Güvenlik Politikası (Security Policy)
+
+Bu projeyi güvenli tutmak bizim önceliğimizdir. Bir güvenlik açığı keşfettiyseniz, lütfen aşağıdaki adımları izleyin.
+
+## Desteklenen Sürümler
+
+Şu anda sadece main branch üzerinden güvenlik güncellemeleri sağlanmaktadır.
+
+| Sürüm | Destek Durumu |
+| :--- | :--- |
+| v1.x | ✅ Destekleniyor |
+| < v1.0 | ❌ Desteklenmiyor |
+
+## Bir Güvenlik Açığını Bildirme
+
+Lütfen güvenlik açıklarını GitHub Issues üzerinden **paylaşmayın.** Bunun yerine:
+
+1. Açığı officallozkan@gmail.com adresine e-posta ile bildirin.
+2. Mümkünse hatayı tetikleyen adımları ve etkilenen kısımları açıklayın.
+3. Size en geç 48 saat içinde dönüş yapılacak ve sorun giderilene kadar bilgi gizli tutulacaktır.
+
+Hassasiyetiniz için teşekkürler.

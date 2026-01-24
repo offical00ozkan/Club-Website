@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  password      String?
+  role          UserRole  @default(USER)
+  emailVerified DateTime?
+  image         String?
+  audits        Audit[]
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Member {
+  id          String    @id @default(cuid())
+  name        String
+  email       String    @unique
+  linkedIn    String?
+  role        String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Event {
+  id          String    @id @default(cuid())
+  code        String    @default(cuid())
+  title       String
+  description String
+  date        DateTime
+  isActive    Boolean   @default(true)
+  image       String?
+  location    String? 
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  participants Participant[] @relation("EventParticipants")
+}
+
+model Participant {
+  id        String    @id @default(cuid())
+  event     Event   @relation("EventParticipants", fields: [eventId], references: [id])
+  eventId   String
+  name      String
+  surname   String
+  email     String?
+  joinedAt  DateTime @default(now())
+}
+
+model Audit {
+  id          String   @id @default(cuid())
+  action      String
+  description String?
+  ipAddress   String?
+  userId      String?   
+  userEmail   String?  
+  user        User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt   DateTime  @default(now())
+}

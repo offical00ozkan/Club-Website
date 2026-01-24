@@ -1,0 +1,44 @@
+# 🛠 Katkı Rehberi (Contributing Guide)
+
+Projeye katkı sağlamak istediğin için teşekkürler! Geliştirme sürecini standart tutmak için lütfen aşağıdaki adımları takip et.
+
+---
+
+## ⚡ Hızlı Başlangıç
+
+1. **Fork & Clone:** Projeyi fork'la ve bilgisayarına çek.
+2. **Branch:** Yeni bir dal aç: `git checkout -b tip/baslik` (Örn: `feat/login-page`)
+3. **Geliştir:** Next.js standartlarına (app router, server components) uygun geliştirme yap.
+4. **Test:** `npm run build` ile hata olmadığından emin ol.
+5. **PR:** Değişikliklerini gönder ve Pull Request oluştur.
+
+---
+
+## 📋 Kurallar ve Standartlar
+
+### 🏗 Kodlama Standartları
+* **Next.js:** Mümkünse Server Component kullan, `"use client"` direktifini sadece etkileşimli yerlerde tercih et.
+* **Güvenlik:** `.env` dosyalarını asla commit'leme.
+* **Mimari:** `components/`, `lib/` ve `hooks/` klasör yapısına sadık kal.
+
+### ✍️ Commit Mesajları (Conventional Commits)
+* `feat:` Yeni bir özellik.
+* `fix:` Bir hatanın düzeltilmesi.
+* `docs:` Dokümantasyon güncellemeleri.
+* `refactor:` Kod iyileştirmesi (özellik eklemeden).
+* `chore:` Bakım, bağımlılık güncellemeleri vb.
+
+---
+
+## 🚀 Pull Request (PR) Süreci
+
+* **Açıklama:** PR'ın neyi çözdüğünü ve nasıl test edileceğini kısaca belirt.
+* **Bağlantı:** Varsa ilgili Issue numarasını `Closes #123` şeklinde ekle.
+* **Kapsam:** Büyük değişiklikleri parçalara böl veya detaylı bir şekilde belirt.
+
+---
+
+## 🐛 Sorun Bildirme
+Bir hata bulduysan issues sekmesinden bildirebilirsin.
+
+Katkıların için teşekkürler! 🚀

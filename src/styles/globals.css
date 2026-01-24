@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-br from-[#1A1C2C] via-[#2A2D46] to-[#1A1C2C] text-white min-h-screen;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
