@@ -113,8 +113,8 @@ export async function PUT(_req: NextRequest) {
       message: "Profil başarıyla güncellendi.",
       user: updatedUser,
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Profil güncellenemedi." },
       { status: 500 }

@@ -3,11 +3,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import type { Event } from "@/types/event";
 
 export default function EventCard({ event }: { event: Event }) {
-  const router = useRouter();
 
   const [popupOpen, setPopupOpen] = useState(false);
   const [name, setName] = useState("");
@@ -32,6 +30,8 @@ export default function EventCard({ event }: { event: Event }) {
 
   const handleSubmit = async () => {
     setError("");
+    setSuccess("");
+
     if (!kvkkConfirmed) {
       setError("KVKK onayı şart.");
       return;
@@ -46,28 +46,38 @@ export default function EventCard({ event }: { event: Event }) {
         body: JSON.stringify({
           eventId: event.id,
           name,
-          email,
           surname,
+          email,
           code: event.code,
         }),
       });
 
-      if (res.status === 401) {
-        router.push("/home/auth/login");
+      const data = await res.json();
+
+      if (res.status === 409) {
+        setError("Bu etkinliğe daha önce katıldınız.");
         return;
       }
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Katılım eklenemedi.");
+      if (!res.ok) {
+        throw new Error(data.error || "Katılım eklenemedi.");
+      }
 
-      setSuccess("Katılım başarıyla eklendi");
+      setSuccess("Katılım başarıyla eklendi 🎉");
+
       setTimeout(() => {
         setPopupOpen(false);
         setKvkkConfirmed(false);
+        setName("");
+        setSurname("");
+        setEmail("");
         setSuccess("");
       }, 1200);
+
     } catch (e) {
-      if (e instanceof Error) setError(e.message);
+      if (e instanceof Error) {
+        setError(e.message);
+      }
     } finally {
       setLoading(false);
     }

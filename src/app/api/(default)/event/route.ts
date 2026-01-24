@@ -21,8 +21,8 @@ export async function GET(_req: NextRequest) {
     }
 
     return NextResponse.json(result);
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Etkinlikler listelenemedi." }, { status: 500 });
   }
 }

@@ -25,8 +25,8 @@ export async function POST(_req: NextRequest) {
     await AuditLogger(_req, "CREATE_EVENT", `Etkinlik oluşturuldu: ${event.title}`);
 
     return NextResponse.json(event);
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Etkinlik oluşturulamadı." }, { status: 500 });
   }
 }
@@ -54,8 +54,8 @@ export async function PUT(_req: NextRequest) {
     await AuditLogger(_req, "UPDATE_EVENT", `Etkinlik güncellendi: ${event.title}`);
 
     return NextResponse.json(event);
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Etkinlik güncellenemedi." }, { status: 500 });
   }
 }
@@ -98,8 +98,8 @@ export async function DELETE(_req: NextRequest) {
     return NextResponse.json({
       message: "Etkinlik ve katılımcıları başarıyla silindi.",
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Etkinlik silinemedi." },
       { status: 500 }

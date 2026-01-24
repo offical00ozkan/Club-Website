@@ -100,8 +100,8 @@ export async function DELETE(_req: NextRequest) {
       message: "Kullanıcı silindi.",
     });
     
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Kullanıcı silinemedi." },
       { status: 500 }
