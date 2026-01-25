@@ -33,7 +33,6 @@ MySQL (Prisma üzerinden yönetilir)
 src/  
 ├── app/            # Sayfalar ve API rotaları  
 │   ├── home/       # Misafir ve üye kullanıcı sayfaları
-
 │   ├── api/        # API rotaları  
 │   └── dashboard/  # Yönetim paneli sayfaları (finans, audit, üye yönetimi)  
 ├── components/     # Yeniden kullanılabilir UI parçaları (home/admin)  
