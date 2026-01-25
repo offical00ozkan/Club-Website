@@ -32,7 +32,7 @@ MySQL (Prisma üzerinden yönetilir)
 
 src/  
 ├── app/            # Sayfalar ve API rotaları  
-│   ├── home/       # Misafir ve üye kullanıcı sayfaları
+│   ├── home/       # Misafir ve üye kullanıcı sayfaları  
 │   ├── api/        # API rotaları  
 │   └── dashboard/  # Yönetim paneli sayfaları (finans, audit, üye yönetimi)  
 ├── components/     # Yeniden kullanılabilir UI parçaları (home/admin)  
@@ -102,5 +102,5 @@ Kullanıcılar, projeyi kendi sorumlulukları altında kullanmayı kabul etmiş 
 ## 📧 İletişim
 
 Geliştirici: Ramazan Özkan  
-E-posta: ramazanozkan000iletisim@gmail.com 
+E-posta: ramazanozkan000iletisim@gmail.com  
 GitHub: [@offical00ozkan](https://github.com/offical00ozkan)
