@@ -51,6 +51,7 @@ Kök dizinde `.env` dosyası oluşturun ve aşağıdaki değişkenleri tanımlay
 DATABASE_URL=  
 AUTH_SECRET=  
 AUTH_URL=  
+NEXT_PUBLIC_APP_URL=  
 NODE_ENV=  
 
 ### 2️⃣ Yerel Çalıştırma
