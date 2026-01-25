@@ -102,5 +102,5 @@ Kullanıcılar, projeyi kendi sorumlulukları altında kullanmayı kabul etmiş 
 ## 📧 İletişim
 
 Geliştirici: Ramazan Özkan  
-E-posta: officallozkan@gmail.com  
+E-posta: ramazanozkan000iletisim@gmail.com 
 GitHub: [@offical00ozkan](https://github.com/offical00ozkan)
